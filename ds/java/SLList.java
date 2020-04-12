@@ -78,6 +78,27 @@ public class SLList<E> {
         }
     }
 
+    /*List reverse. 维护三个指针p cur tmp快慢指针*/
+    public void reverse(){
+        if (first==null || first.next==null){
+            return;
+        }
+        Node p=first;
+        Node cur;
+        cur=p.next;
+        p.next=null;
+        while(cur!=null){
+            Node tmp=cur.next;
+            cur.next=p;
+            p=cur;
+            cur=tmp;
+        }
+        first=p;
+    }
+    /*递归写法，需要加参数和返回值*/
+    public void reverseRecusion(){
+    }
+
     @Override
     public String toString() {
         StringBuilder s = new StringBuilder("SLList{");

@@ -6,6 +6,7 @@ public class SLListTest {
         System.out.println(slList.getFirst()+"  last:"+slList.getLast());
         slList.insert("白起",3);
         System.out.println(slList);
-
+        slList.reverse();
+        System.out.println(slList);
     }
 }
